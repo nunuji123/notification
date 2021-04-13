@@ -19,7 +19,9 @@ Notification.newInstance({
 
 export default class PureSimple extends Component {
     simpleShow() {
-        // notification.notice({})
+        notification.notice({
+            content: "<p>notice</p>"
+        })
     }
     render() {
         return (

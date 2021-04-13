@@ -181,6 +181,7 @@ class Notification extends Component<NotificationProps, NotificationState> {
       this.noticePropsMap[key as React.Key] = { props: noticeProps, holderCallback };
     });
 
+    console.log('noticeKeys :>> ', noticeKeys);
     return (
       <div className={classNames(prefixCls, className)} style={style}>
         <CSSMotionList
@@ -241,6 +242,7 @@ Notification.newInstance = function newNotificationInstance(properties, callback
   }
   let called = false;
   function ref(notification: Notification) {
+    debugger
     if (called) {
       return;
     }
