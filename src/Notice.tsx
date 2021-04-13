@@ -44,11 +44,13 @@ export default class Notice extends Component<NoticeProps> {
       this.props.duration !== prevProps.duration ||
       this.props.updateMark !== prevProps.updateMark
     ) {
+      console.log(`did update`)
       this.restartCloseTimer();
     }
   }
 
   componentWillUnmount() {
+    console.log(`componentWillUnmount`)
     this.clearCloseTimer();
   }
 
@@ -124,6 +126,8 @@ export default class Notice extends Component<NoticeProps> {
       </div>
     );
 
+
+    console.log('holder :>> ', holder);
     if (holder) {
       return ReactDOM.createPortal(node, holder);
     }
